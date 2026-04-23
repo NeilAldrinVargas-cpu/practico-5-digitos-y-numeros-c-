@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath> // Para usar la función pow()
+
+using namespace std;
+
+int main() {
+    double X, N;
+    double suma = 0;
+
+    // Entrada de datos
+    cout << "Ingrese el valor de la base (X): ";
+    cin >> X;
+    cout << "Ingrese el valor del exponente maximo (N): ";
+    cin >> N;
+
+    // Proceso: Ciclo para sumar cada término
+    for (int i = 1; i <= N; i++) {
+        suma = suma + pow(X, i);
+    }
+
+    // Salida de resultados
+    cout << "La suma total de la serie es: " << suma << endl;
+
+    return 0;
+}
