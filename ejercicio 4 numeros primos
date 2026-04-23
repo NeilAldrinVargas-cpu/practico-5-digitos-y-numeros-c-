@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+
+    cout << "Numeros primos entre 1 y " << N << ":" << endl;
+
+    // Bucle EXTERNO: Recorre cada numero 'i' desde 2 hasta N
+    for (int i = 2; i <= N; i++) {
+        bool esPrimo = true; // Suponemos que es primo hasta que se demuestre lo contrario
+
+        // Bucle INTERNO: Intenta dividir 'i' entre 'j'
+        // Si i es divisible por algun j, entonces NO es primo
+        for (int j = 2; j < i; j++) {
+            if (i % j == 0) {
+                esPrimo = false; // ¡Lo encontramos! Tiene otro divisor
+                break;           // Nos salimos del bucle interno para ahorrar tiempo
+            }
+        }
+
+        // Si despues de revisar todos los 'j' sigue siendo true, es primo
+        if (esPrimo) {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
+}
