@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int filas;
+    cout << "Ingrese el numero de filas para la piramide: ";
+    cin >> filas;
+
+    for (int i = 1; i <= filas; i++) {
+        
+        // 1. Imprimir espacios en blanco para centrar
+        // Se imprimen (Total de filas - fila actual) espacios
+        for (int j = 1; j <= filas - i; j++) {
+            cout << " ";
+        }
+
+        // 2. Imprimir los asteriscos
+        // La formula para numeros impares es (2 * i - 1)
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*";
+        }
+
+        // 3. Salto de linea
+        cout << endl;
+    }
+
+    return 0;
+}
