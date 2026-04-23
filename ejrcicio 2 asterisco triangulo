@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int filas;
+
+    cout << "Ingrese la altura del triangulo: ";
+    cin >> filas;
+
+    // Bucle externo: Controla el número de la fila actual
+    for (int i = 1; i <= filas; i++) {
+        
+        // Bucle interno: Imprime los asteriscos de esa fila
+        for (int j = 1; j <= i; j++) {
+            cout << "*";
+        }
+
+        // Salto de linea al terminar cada fila
+        cout << endl;
+    }
+
+    return 0;
+}
